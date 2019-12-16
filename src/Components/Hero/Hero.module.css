@@ -1,0 +1,23 @@
+.hero {
+  color: #ffffff;
+  max-width: 715px;
+  margin-bottom: 100px;
+}
+
+.hero>h1 {
+  font-size: 100px;
+  height: 122px;
+  line-height: 117px;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.hero>p {
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: flex-end;
+  margin: 5px 0 0 0;
+  letter-spacing: 0.416667px;
+}
