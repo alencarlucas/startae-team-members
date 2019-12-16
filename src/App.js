@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DefaultContainer from './Containers/DefaultContainer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DefaultContainer
+      heroTitle="Meet our team"
+      heroSubject="We are a group of multi-skilled individuals who are entrepreneurial by nature and live to make digital products and services that people love to use."
+      heroTextAlignment="left"
+    />
   );
-}
+};
 
 export default App;
