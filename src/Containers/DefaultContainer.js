@@ -4,7 +4,8 @@ import Header from '../Components/Header/Header';
 import Hero from '../Components/Hero/Hero';
 import TeamMembersAPI from '../TeamMembersAPI';
 import styles from './Container.module.css';
-import Card from '../Components/Card/Card';
+import CardsList from './CardsList/CardsList';
+import { ReactComponent as LogoTwitter } from '../assets/logos/logo-twitter.svg';
 
 const DefaultContainer = ({ heroTitle, heroSubject, heroTextAlignment }) => {
   const [members, setMembers] = useState([]);
@@ -25,7 +26,10 @@ const DefaultContainer = ({ heroTitle, heroSubject, heroTextAlignment }) => {
         subject={heroSubject}
         textAlignment={heroTextAlignment}
       />
-      <Card member={members[0] || {}} />
+      <span className={styles['latest-tweets']}>
+        <LogoTwitter /> Latest tweets from our team
+      </span>
+      <CardsList members={members} />
     </div>
   );
 };
