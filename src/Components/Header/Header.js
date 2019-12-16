@@ -5,12 +5,16 @@ import { ReactComponent as LogoType } from '../../assets/logos/logo-type.svg';
 
 const Header = () => {
   return (
-    <div className={styles.header}>
-      <div className={styles.logo}>
-        <LogoSymbol />
-        <LogoType />
+    <nav>
+      <div className="container">
+        <div className={styles.header}>
+          <div className={styles.logo}>
+            <LogoSymbol />
+            <LogoType />
+          </div>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import propTypes from 'prop-types';
-import Header from '../Components/Header/Header';
 import Hero from '../Components/Hero/Hero';
 import TeamMembersAPI from '../TeamMembersAPI';
 import styles from './Container.module.css';
@@ -19,8 +18,7 @@ const DefaultContainer = ({ heroTitle, heroSubject, heroTextAlignment }) => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <Header />
+    <div className="container">
       <Hero
         title={heroTitle}
         subject={heroSubject}

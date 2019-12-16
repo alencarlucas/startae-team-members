@@ -21,3 +21,22 @@
   margin: 5px 0 0 0;
   letter-spacing: 0.416667px;
 }
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    max-width: 280px;
+    margin-bottom: 45px;
+  }
+
+  .hero>h1 {
+    font-size: 42px;
+    line-height: 58px;
+    height: inherit;
+  }
+
+  .hero>p {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+  }
+}

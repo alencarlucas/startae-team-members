@@ -31,6 +31,10 @@ const Card = ({ member }) => {
       <h2 className={styles.name}>{member.name}</h2>
       <h3 className={styles.twitter}>{`@${getTwitterUser(member.twitter)}`}</h3>
       <h3 className={styles.role}>{member.role}</h3>
+      <h3 className={styles['role--mobile']}>{member.role}</h3>
+      <h3 className={styles['twitter--mobile']}>{`@${getTwitterUser(
+        member.twitter
+      )}`}</h3>
       <h3 className={styles.tweet}>{`"${member.tweet}"`}</h3>
     </div>
   );

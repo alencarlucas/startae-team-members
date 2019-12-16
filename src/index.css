@@ -6,7 +6,50 @@
 body {
   font-family: ProximaNova;
   background-image: -webkit-linear-gradient(70deg,
-      var(--main-red) 56.62%,
-      var(--main-purple) 45.38%);
+      var(--main-red) 56.38%,
+      var(--main-purple) 43.62%);
   height: 2080px;
+  margin: 0px;
+}
+
+.container {
+  padding: 30px 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1380px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 30px 10px;
+  }
 }
