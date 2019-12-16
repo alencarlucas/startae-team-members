@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import propTypes from 'prop-types';
-import Hero from '../Components/Hero/Hero';
-import TeamMembersAPI from '../TeamMembersAPI';
-import styles from './Container.module.css';
-import CardsList from './CardsList/CardsList';
-import { ReactComponent as LogoTwitter } from '../assets/logos/logo-twitter.svg';
+import Hero from '../../Components/Hero/Hero';
+import TeamMembersAPI from '../../TeamMembersAPI';
+import styles from './Feed.module.css';
+import CardsList from '../../Components/CardsList/CardsList';
+import { ReactComponent as LogoTwitter } from '../../assets/logos/logo-twitter.svg';
 
-const DefaultContainer = ({ heroTitle, heroSubject, heroTextAlignment }) => {
+const Feed = ({ heroTitle, heroSubject, heroTextAlignment }) => {
   const [members, setMembers] = useState([]);
 
   useEffect(() => {
@@ -32,14 +32,14 @@ const DefaultContainer = ({ heroTitle, heroSubject, heroTextAlignment }) => {
   );
 };
 
-DefaultContainer.propTypes = {
+Feed.propTypes = {
   heroTitle: propTypes.string.isRequired,
   heroSubject: propTypes.string.isRequired,
   heroTextAlignment: propTypes.string
 };
 
-DefaultContainer.defaultProps = {
+Feed.defaultProps = {
   heroTextAlignment: 'left'
 };
 
-export default DefaultContainer;
+export default Feed;

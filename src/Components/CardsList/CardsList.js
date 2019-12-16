@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import Card from '../../Components/Card/Card';
+import Card from '../Card/Card';
 import styles from './CardsList.module.css';
 
 const CardsList = ({ members }) => {
