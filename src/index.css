@@ -5,10 +5,11 @@
 
 body {
   font-family: ProximaNova;
-  background-image: -webkit-linear-gradient(70deg,
-      var(--main-red) 56.38%,
-      var(--main-purple) 43.62%);
-  height: 2080px;
+  background-image: -webkit-linear-gradient(
+    70deg,
+    var(--main-red) 56.38%,
+    var(--main-purple) 43.62%
+  );
   margin: 0px;
   background-repeat: no-repeat;
   background-color: var(--main-red);
