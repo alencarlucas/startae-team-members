@@ -6,7 +6,7 @@ const Hero = ({ title, subtitle, textAlignment }) => {
   return (
     <div className={`${styles.hero} ${styles[textAlignment]}`}>
       <h1>{title}</h1>
-      <p>{subject}</p>
+      <p>{subtitle}</p>
     </div>
   );
 };
