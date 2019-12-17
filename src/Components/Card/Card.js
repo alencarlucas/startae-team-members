@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Card.module.css';
+import types from '../../utils/types';
 
 const DEFAULT_USER_PROFILE_PIC = '/default_user_profile_pic.png';
 
@@ -37,14 +38,7 @@ const Card = ({ member }) => {
 };
 
 Card.propTypes = {
-  member: PropTypes.shape({
-    name: PropTypes.string,
-    avatar: PropTypes.string,
-    role: PropTypes.string,
-    tweet: PropTypes.string,
-    twitter: PropTypes.string,
-    twitterUser: PropTypes.string
-  }).isRequired
+  member: PropTypes.instanceOf(types.Member).isRequired
 };
 
 export default Card;
