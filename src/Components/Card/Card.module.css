@@ -1,8 +1,12 @@
+a.card-anchor {
+  text-decoration: none;
+  color: #000000;
+}
+
 .card {
   background: #ffffff;
   border-radius: 5px;
   padding: 20px;
-  cursor: pointer;
 }
 
 .photo {
