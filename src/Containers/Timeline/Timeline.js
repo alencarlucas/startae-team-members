@@ -33,7 +33,7 @@ const Feed = ({ match }) => {
       <div className="container">
         <Hero
           title={_.get(member, 'name', '')}
-          subject={_.get(member, 'role', '')}
+          subtitle={_.get(member, 'role', '')}
           textAlignment="center"
         />
         <span className={styles['latest-tweets']}>
