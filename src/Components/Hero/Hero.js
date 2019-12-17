@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import styles from './Hero.module.css';
 
 const Hero = ({ title, subject, textAlignment = 'left' }) => {
-  console.log('styles', styles);
   return (
-    <div className={styles.hero} style={{ textAlign: textAlignment }}>
+    <div className={`${styles.hero} ${styles[textAlignment]}`}>
       <h1>{title}</h1>
       <p>{subject}</p>
     </div>

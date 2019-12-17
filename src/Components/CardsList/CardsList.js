@@ -15,7 +15,7 @@ const CardsList = ({ members }) => {
 };
 
 CardsList.propTypes = {
-  members: PropTypes.instanceOf(Array).isRequired
+  members: PropTypes.instanceOf([]).isRequired
 };
 
 export default CardsList;
