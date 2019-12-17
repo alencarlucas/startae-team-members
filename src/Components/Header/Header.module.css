@@ -14,7 +14,8 @@ nav {
   z-index: 1;
 }
 
-.logo>svg:first-child {
+.logo>svg:first-child,
+.logo>a>svg:first-child {
   margin-right: 10px;
 }
 
@@ -32,7 +33,8 @@ nav {
     height: 100%;
   }
 
-  .logo>svg:last-child {
+  .logo>svg:last-child,
+  .logo>a>svg:last-child {
     display: None;
   }
 }
