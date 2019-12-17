@@ -2,6 +2,7 @@ import axios from 'axios';
 import _ from 'lodash';
 import settings from './settings';
 
+const REPEAT_DATA_N_TIMES = Array.from(Array(5));
 const API_BASE_URL = settings.get('API_BASE_URL');
 const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
@@ -44,4 +45,18 @@ const getMemberByName = async name => {
   return member;
 };
 
-export default { getMemberByName, getAll };
+const getMemberDataByName = async memberName => {
+  let memberData = [];
+  try {
+    const member = await getMemberByName(memberName);
+    memberData = _.map(REPEAT_DATA_N_TIMES, () => ({
+      tweetElapsedTime: 5,
+      ...member
+    }));
+  } catch (err) {
+    console.error(err);
+  }
+  return memberData;
+};
+
+export default { getMemberByName, getMemberDataByName, getAll };
