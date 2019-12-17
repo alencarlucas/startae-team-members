@@ -22,9 +22,9 @@ const TimelineItem = ({ avatar, tweet, tweetElapsedTime }) => {
         <div className={styles['timeline-avatar-wrapper']}>
           <img
             className={styles['avatar-rounded']}
-            srcSet={avatarSrc}
+            src={avatarSrc}
             onError={onImageErrorHandler}
-            alt="tweet"
+            alt=""
           />
         </div>
         <div className={styles['timeline-tweet']}>
