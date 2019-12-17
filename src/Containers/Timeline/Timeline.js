@@ -10,16 +10,22 @@ import Header from '../../Components/Header/Header';
 
 const Feed = ({ match }) => {
   const [member, setMember] = useState('');
+  const [memberData, setMemberData] = useState([]);
+
   const memberName = _.get(match, 'params.name', '');
-  const data = Array.from(Array(5));
 
   useEffect(() => {
     async function loadMember() {
       setMember(await TeamMembersAPI.getMemberByName(memberName));
     }
 
+    async function loadMemberData() {
+      setMemberData(await TeamMembersAPI.getMemberDataByName(memberName));
+    }
+
     loadMember();
-  });
+    loadMemberData();
+  }, [memberName]);
 
   return (
     <>
@@ -35,10 +41,11 @@ const Feed = ({ match }) => {
           {`@${_.get(member, 'twitterUser')}`}
         </span>
         <div className={`${styles['timeline-container']} container`}>
-          {_.map(data, (value, index) => (
+          {_.map(memberData, (currentMember, index) => (
             <TimelineItem
-              avatar={_.get(member, 'avatar', '')}
-              tweet={_.get(member, 'tweet', '')}
+              avatar={_.get(currentMember, 'avatar', '')}
+              tweet={_.get(currentMember, 'tweet', '')}
+              tweetElapsedTime={_.get(currentMember, 'tweetElapsedTime', '')}
               key={index}
             />
           ))}
