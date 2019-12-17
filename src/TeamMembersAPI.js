@@ -8,12 +8,29 @@ const axiosInstance = axios.create({
   timeout: 3000
 });
 
+const getTwitterUser = twitterURL => {
+  return _.last(_.split(twitterURL, '/'));
+};
+
+const getAll = async () => {
+  try {
+    const members = (await axiosInstance.get('/')).data;
+    return _.map(members, member => ({
+      twitterUser: getTwitterUser(member.twitter),
+      ...member
+    }));
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+};
+
 const getMemberByName = async name => {
   let member = {};
   try {
-    const { data } = await axiosInstance.get('/');
+    const members = await getAll();
     const filteredData = _.filter(
-      data,
+      members,
       currentMember => currentMember.name === name
     );
 
@@ -25,15 +42,6 @@ const getMemberByName = async name => {
     console.error(err);
   }
   return member;
-};
-
-const getAll = async () => {
-  try {
-    return (await axiosInstance.get('/')).data;
-  } catch (err) {
-    console.error(err);
-    return [];
-  }
 };
 
 export default { getMemberByName, getAll };
