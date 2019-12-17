@@ -1,6 +1,6 @@
 # Startaê-Team-Members
 
-This project aims to accomplish all the requisites of Startaê Front End Challenger. 
+This project aims to accomplish all the requisites of Startaê Front End Challenge. 
 
 [Live Demo](http://startae-team-members.s3-website-sa-east-1.amazonaws.com/)
 
