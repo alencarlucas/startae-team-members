@@ -1,6 +1,7 @@
 a.card-anchor {
   text-decoration: none;
   color: #000000;
+  display: grid;
 }
 
 .card {
