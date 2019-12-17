@@ -6,7 +6,7 @@ import Timeline from './Containers/Timeline/Timeline';
 const App = () => {
   return (
     <>
-      <Route exact path="/" component={<Feed />} />
+      <Route exact path="/" component={Feed} />
       <Route path="/timeline/:name" component={Timeline} />
     </>
   );
