@@ -9,4 +9,10 @@ const Member = PropTypes.shape({
   twitterUser: PropTypes.string
 });
 
-export default { Member };
+const Match = PropTypes.shape({
+  match: PropTypes.instanceOf({}),
+  location: PropTypes.string,
+  history: PropTypes.instanceOf({})
+});
+
+export default { Member, Match };

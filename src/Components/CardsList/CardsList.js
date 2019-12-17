@@ -8,9 +8,11 @@ import types from '../../utils/types';
 const CardsList = ({ members }) => {
   return (
     <div className={styles['cards-list']}>
-      {_.map(members, (member, index) => (
-        <Card member={member} key={index} />
-      ))}
+      {_.map(
+        members,
+        (member, index) =>
+          (member && <Card member={member} key={index} />) || <></>
+      )}
     </div>
   );
 };

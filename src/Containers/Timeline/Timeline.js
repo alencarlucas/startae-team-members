@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Hero from '../../Components/Hero/Hero';
 import TimelineItem from '../../Components/TimelineItem/TimelineItem';
@@ -7,6 +6,7 @@ import TeamMembersAPI from '../../TeamMembersAPI';
 import styles from './Timeline.module.css';
 import { ReactComponent as LogoTwitter } from '../../assets/logos/logo-twitter.svg';
 import Header from '../../Components/Header/Header';
+import types from '../../utils/types';
 
 const Feed = ({ match }) => {
   const [member, setMember] = useState('');
@@ -56,7 +56,7 @@ const Feed = ({ match }) => {
 };
 
 Feed.propTypes = {
-  match: PropTypes.instanceOf({}).isRequired
+  match: types.Match.isRequired
 };
 
 export default Feed;

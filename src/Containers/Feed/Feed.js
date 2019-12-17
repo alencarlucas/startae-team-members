@@ -30,7 +30,7 @@ const Feed = () => {
         <span className={styles['latest-tweets']}>
           <LogoTwitter /> Latest tweets from our team
         </span>
-        <CardsList members={members} />
+        {_.size(members) > 0 && <CardsList members={members} />}
       </div>
     </>
   );
